@@ -1,0 +1,84 @@
+:root{
+  --bg:#F4F7F6; --surface:#FFFFFF; --text:#0F2A30; --muted:#4F6A70;
+  --line:#D5E2E0; --accent:#0E7C7B; --accent-ink:#FFFFFF; --sand:#E8D3AE;
+  --wave:#BFE3DF; color-scheme:light;
+  box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#071619; --surface:#0D2328; --text:#E7F2F0; --muted:#97B3B3;
+    --line:#1B3A40; --accent:#3FD0C6; --accent-ink:#04201F; --sand:#CDB88F;
+    --wave:#0F3A40; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#071619; --surface:#0D2328; --text:#E7F2F0; --muted:#97B3B3;
+  --line:#1B3A40; --accent:#3FD0C6; --accent-ink:#04201F; --sand:#CDB88F;
+  --wave:#0F3A40; color-scheme:dark;
+}
+html{scroll-behavior:smooth;scroll-padding-top:calc(72px + env(safe-area-inset-top,0px))}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:400 1.0625rem/1.7 "Manrope",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:"Bricolage Grotesque",system-ui,sans-serif;line-height:1.1;margin:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+
+header.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:30}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px;gap:16px}
+.logo{font:800 1.15rem "Bricolage Grotesque",sans-serif;text-decoration:none}
+.nav ul{display:flex;gap:22px;list-style:none;margin:0;padding:0}
+.nav ul a{text-decoration:none;color:var(--muted);font-weight:500;font-size:.95rem}
+.nav ul a:hover{color:var(--text)}
+.theme{border:1px solid var(--line);background:var(--surface);color:var(--text);width:42px;height:42px;border-radius:50%;cursor:pointer;font-size:1.1rem;display:grid;place-items:center}
+@media(max-width:640px){.nav ul{display:none}}
+
+/* Hero */
+.hero{position:relative;overflow:hidden;padding:84px 0 150px}
+.hero h1{font-size:clamp(3rem,10vw,6.5rem);font-weight:800;letter-spacing:-.03em}
+.hero .role{font:500 clamp(1.1rem,2.4vw,1.4rem)/1.5 "Manrope",sans-serif;color:var(--muted);margin:22px 0 0;max-width:34ch}
+.route{display:flex;align-items:center;gap:12px;margin:34px 0 0;flex-wrap:wrap;font-weight:600}
+.route .dot{width:10px;height:10px;border-radius:50%;background:var(--accent)}
+.route .line{flex:0 0 64px;height:2px;background:repeating-linear-gradient(90deg,var(--accent) 0 8px,transparent 8px 14px)}
+.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:34px}
+.btn{display:inline-block;padding:12px 22px;border-radius:999px;font-weight:600;text-decoration:none;border:1.5px solid var(--text)}
+.btn.primary{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.btn:hover{transform:translateY(-2px)}
+.btn{transition:transform .2s}
+.waves{position:absolute;left:0;right:0;bottom:0;height:110px;pointer-events:none}
+.waves svg{position:absolute;bottom:0;width:200%;height:100%;animation:drift 18s linear infinite}
+.waves svg:nth-child(2){animation-duration:28s;animation-direction:reverse;opacity:.6;height:80%}
+@keyframes drift{to{transform:translateX(-50%)}}
+@media(prefers-reduced-motion:reduce){.waves svg{animation:none}html{scroll-behavior:auto}.btn{transition:none}}
+
+section{padding:76px 0}
+section h2{font-size:clamp(2rem,5vw,3rem);margin-bottom:28px;letter-spacing:-.02em}
+.about{display:grid;grid-template-columns:1.4fr 1fr;gap:48px}
+.about p{margin:0 0 16px;max-width:62ch}
+.facts{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:24px;align-self:start}
+.facts dl{margin:0;display:grid;gap:14px}
+.facts dt{font-size:.85rem;color:var(--muted)}
+.facts dd{margin:0;font-weight:600}
+@media(max-width:760px){.about{grid-template-columns:1fr}}
+
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin:0;padding:0;list-style:none}
+.chips li{padding:9px 18px;border-radius:999px;background:var(--surface);border:1px solid var(--line);font-weight:600;font-size:.97rem}
+.skillgroup{margin-bottom:26px}
+.skillgroup h3{font-size:1.1rem;margin-bottom:12px;color:var(--muted);font-weight:500}
+
+.projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:26px;display:flex;flex-direction:column;gap:12px}
+.card h3{font-size:1.35rem}
+.card p{margin:0;color:var(--muted);font-size:1rem}
+.card .tags{margin-top:auto;padding-top:8px;font-size:.9rem;font-weight:600;color:var(--accent)}
+.card a.link{font-weight:600}
+
+.edu{border-inline-start:3px solid var(--accent);padding-inline-start:22px;max-width:640px}
+.edu h3{font-size:1.5rem;margin-bottom:6px}
+.edu p{margin:0;color:var(--muted)}
+
+.contact{background:var(--wave)}
+.contact p{max-width:48ch;margin:0 0 26px}
+.links{display:flex;flex-wrap:wrap;gap:12px}
+footer{padding:28px 0 40px;color:var(--muted);font-size:.92rem;text-align:center}

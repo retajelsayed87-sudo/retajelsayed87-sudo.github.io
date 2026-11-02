@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Retaj El-Sayed</title>
+<meta name="description" content="Portfolio of Retaj El-Sayed, third-year Computer Science student at Shorouk Academy.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="logo" href="#top">Retaj El-Sayed</a>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="theme" id="theme" type="button" aria-label="Switch to dark mode">🌙</button>
+  </div>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <div class="wrap">
+      <h1>Retaj<br>El-Sayed</h1>
+      <p class="role">Computer Science student building clean, useful things for the web.</p>
+      <div class="route" aria-label="From Marsa Matrouh to Shorouk">
+        <span class="dot"></span>Marsa Matrouh<span class="line"></span><span class="dot"></span>Shorouk City
+      </div>
+      <div class="cta">
+        <a class="btn primary" href="#projects">See my work</a>
+        <a class="btn" href="#contact">Get in touch</a>
+      </div>
+    </div>
+    <div class="waves" aria-hidden="true">
+      <svg viewBox="0 0 1200 100" preserveAspectRatio="none"><path fill="var(--wave)" d="M0 50 Q150 10 300 50 T600 50 T900 50 T1200 50 V100 H0Z"/></svg>
+      <svg viewBox="0 0 1200 100" preserveAspectRatio="none"><path fill="var(--accent)" fill-opacity=".35" d="M0 60 Q150 90 300 60 T600 60 T900 60 T1200 60 V100 H0Z"/></svg>
+    </div>
+  </div>
+
+  <section id="about">
+    <div class="wrap about">
+      <div>
+        <h2>About me</h2>
+        <p>I’m Retaj, a third-year Computer Science student at Shorouk Academy in the Faculty of Computers and Information. I grew up in Marsa Matrouh and moved to Shorouk City to study, where I live in the university housing.</p>
+        <p>I enjoy turning ideas into working software, from the logic behind it to the interface people actually use. I’m looking for a training or internship opportunity where I can learn from a team and contribute from day one.</p>
+      </div>
+      <aside class="facts">
+        <dl>
+          <div><dt>Studying</dt><dd>Computer Science, Year 3</dd></div>
+          <div><dt>University</dt><dd>Shorouk Academy</dd></div>
+          <div><dt>Hometown</dt><dd>Marsa Matrouh, Egypt</dd></div>
+          <div><dt>Based in</dt><dd>Shorouk City, Cairo</dd></div>
+        </dl>
+      </aside>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="wrap">
+      <h2>Skills</h2>
+      <div class="skillgroup">
+        <h3>Programming languages and technologies</h3>
+        <ul class="chips"><li>HTML5</li><li>CSS3</li><li>JavaScript</li><li>TypeScript (basics)</li></ul>
+      </div>
+      <div class="skillgroup">
+        <h3>Front-end frameworks and libraries</h3>
+        <ul class="chips"><li>React.js</li><li>Tailwind CSS</li><li>Bootstrap</li></ul>
+      </div>
+      <div class="skillgroup">
+        <h3>Web development</h3>
+        <ul class="chips"><li>Responsive web design</li><li>APIs</li></ul>
+      </div>
+      <div class="skillgroup">
+        <h3>Tools</h3>
+        <ul class="chips"><li>Git</li><li>GitHub</li><li>VS Code</li><li>npm</li><li>Vite</li></ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="wrap">
+      <h2>Projects</h2>
+      <div class="projects">
+        <article class="card">
+          <h3>Remasco Group</h3>
+          <p>A live company website I worked on, built to present the business online.</p>
+          <div class="tags">Live website</div>
+          <a class="link" href="https://remascogroup.com/" rel="noopener">Visit remascogroup.com</a>
+        </article>
+        <article class="card">
+          <h3>Qamar Factory</h3>
+          <p>A second live website I worked on, for a factory brand.</p>
+          <div class="tags">Live website</div>
+          <a class="link" href="https://qamar-factory.com/" rel="noopener">Visit qamar-factory.com</a>
+        </article>
+        <article class="card">
+          <h3>More on the way</h3>
+          <p>I’m working on new projects. They will show up here as soon as they are ready.</p>
+          <div class="tags">Coming soon</div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="education">
+    <div class="wrap">
+      <h2>Education</h2>
+      <div class="edu">
+        <h3>B.Sc. Computer Science</h3>
+        <p>Faculty of Computers and Information, Shorouk Academy<br>Currently in the third year</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="wrap">
+      <h2>Let’s talk</h2>
+      <p>I’m open to internships, training programs, and student projects. Send me a message and I’ll reply soon.</p>
+      <div class="links">
+        <a class="btn primary" href="mailto:retajelsayedW@gmail.com">retajelsayedW@gmail.com</a>
+        <a class="btn" href="tel:+201031211365">01031211365</a>
+        <a class="btn" href="https://www.linkedin.com/in/retaj-elsayed-b0b89a349" rel="noopener">LinkedIn</a>
+        <a class="btn" href="https://github.com/retajelsayed87-sudo" rel="noopener">GitHub</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer><div class="wrap">© <span id="y">2026</span> Retaj El-Sayed</div></footer>
+
+<script src="script.js"></script>
+</body>
+</html>
